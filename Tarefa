@@ -1,0 +1,84 @@
+CREATE DATABASE exercício;
+
+/c nome;
+
+CREATE TABLE contatos (
+
+id VARCHAR (30) NOT NULL,
+nome VARCHAR (25) NOT NULL,
+telefone VARCHAR (15) NOT NULL,
+email VARCHAR (100),
+grupo VARCHAR (25),
+PRIMARY KEY (id));
+
+INSERT INTO contatos (id, nome, telefone, email, grupo) VALUES 
+
+(‘1’, 'João Silva', 'joaosilva@gmail.com', '1199999999', 'Trabalho'),
+(‘2’, 'Maria Oliveira', 'mariaoliveira@hotmail.com', '1288888888', 'Família'),
+(‘3’, 'Pedro Souza', 'pedrosouza@yahoo.com.br', '1377777777', 'Amigo'),
+(‘4’, 'Ana Costa', 'anacosta@uol.com.br', '1466666666', 'Escola'),
+(‘5’, 'Carlos Santos', 'carloshsantos@ig.com.br', '1555555555', 'Trabalho'),
+(‘6’, 'Bruno Andrade', 'brunoandrade@gmail.com', '1644444444', 'Amigo'),
+(‘7’, 'Camila Ribeiro', 'camilaribeiro@hotmail.com', '1733333333', 'Família'),
+(‘8’, 'Daniel Ferreira', 'danielferreira@yahoo.com.br', '1822222222', 'Trabalho'),
+(‘9’, 'Eduardo Pereira', 'eduardopereira@gmail.com', '1911111111', 'Amigo'),
+(‘10’, 'Fernanda Costa', 'fernandac osta@hotmail.com', '2000000000', 'Família'),
+(’11’, 'Gabriel Silva', 'gabrielsilva@yahoo.com.br', '2199998888', 'Trabalho'),
+(’12’, 'Gabriela Oliveira', 'gabrielaoliveira@gmail.com', '2288887777', 'Amigo'),
+(‘13’, 'Henrique Souza', 'henriquesouza@hotmail.com', '2377776666', 'Família'),
+(‘14’, 'Isabela Pereira', 'isabelapereira@yahoo.com.br', '2466665555', 'Trabalho'),
+(’15’, 'João Santos', 'joaosantos@gmail.com', '2555554444', 'Amigo'),
+(‘16’, 'Julia Costa', 'juliagmail.com', '2644443333', 'Família'),
+(‘17’, 'Leonardo Silva', 'leonardosilva@yahoo.com.br', '2733332222', 'Trabalho'),
+(‘18’, 'Luana Oliveira', 'luanaoliveira@gmail.com', '2822221111', 'Amigo'),
+(‘19’, 'Marcelo Pereira', 'marcelopereira@hotmail.com', '2911110000', 'Família'),
+(‘20’, 'Mariana Costa', 'marianagmail.com', '3000009999', 'Trabalho'),
+(‘21’, 'Matheus Silva', 'matheussilva@yahoo.com.br', '3199998888', 'Amigo'),
+(‘22’, 'Mayara Oliveira', 'mayaraoliveira@gmail.com', '3288887777', 'Família'),
+(‘23’, 'Rafael Souza', 'rafaelsouza@yahoo.com.br', '3377776666', 'Trabalho'),
+(‘24’, 'Rafaela Pereira', 'rafaela gmail.com', '3466665555', 'Amigo'),
+(‘25’, 'Ricardo Santos', 'ricardosantos@hotmail.com', '3555554444', 'Família'),
+(‘26’, ‘João Silva’, ‘joaosilva@email.com’, ‘111111111’, ‘Família’),
+(‘27’, ‘Maria Oliveira’, ‘mariaoliveira@email.com’, ‘222222222’, “Trabalho’),
+(‘28’, ‘Pedro Souza’, ‘pedrosouza@email.com’, ‘333333333’, ‘Amigo’),
+(‘29’, ‘Ana Costa’, ‘anacosta@email.com’, ‘444444444’, ‘Escola’),
+(‘30’, ‘Carlos Santos’, ‘carloshsantos@email.com’, ‘555555555’, ‘Família’),
+(‘31’, ‘Daniela Fernandes’, ‘danielaf@email.com’, ‘666666666’, ‘Trabalho’),
+(‘32’, ‘Eduardo Pereira’, ‘eduardopereira@email.com’, ‘777777777’, ‘Amigo’),
+(‘33’, ‘Gabriela Martins’, ‘gabrielamartins@email.com’, ‘888888888’, ‘Escola’),
+(‘34’, ‘Rafael Rodrigues’, ‘rafaelrodrigues@email.com’, ‘999999999’, ‘Família’),
+(‘35’, ‘Mariana Teixeira’, ‘marianateixeira@email.com’, ‘1010101010’, ‘Trabalho’),
+(‘36’, ‘Bruno Dias’, ‘brunodias@email.com’, ‘1111111111’, ‘Amigo’),
+(‘37’, ‘Clara Gomes’, ‘claragomes@email.com’, ‘1212121212’, ‘Escola’),
+(‘38’, ‘Leonardo Lima’, ‘leonardolima@email.com’, ‘1313131313’, ‘Família’),
+(‘39’, ‘Luiza Ribeiro’, ‘luizaribeiro@email.com’, ‘1414141414’, ‘Amigo’),
+(‘40’, ‘Marcelo Campos’, ‘marceloca@email.com’, ‘1515151515’, ‘Trabalho’),
+(‘41’, ‘Sofia Andrade’, ‘sofiaandrade@email.com’, ‘1616161616’, ‘Escola’),
+(‘42’, ‘Vinicius Barbosa’, ‘viniciusbarbosa@email.com’, ‘1717171717’, ‘Família’),
+(‘43’, ‘Amanda Souza’, ‘amandasouza@email.com’, ‘1818181818’, ‘Amigo’),
+(‘44’, ‘Guilherme Costa’, ‘guilhermecosta@email.com’, ‘1919191919’, ‘Trabalho’),
+(‘45’, ‘Isabella Pereira’, ‘isabellaper@email.com’, ‘2020202020’, ‘Trabalho’),
+(‘46’, ‘Davi Santos’, ‘davisantos@email.com’, ‘2121212121’, ‘Trabalho’),
+(‘47’, ‘Érica Silva’, ‘ericasilva@email.com’, ‘2222222222’, ‘Amigo’),
+(‘48’, ‘Felipe Oliveira’, ‘felipeoliveira@email.com’, ‘2323232323’, ‘Escola’),
+(‘49’, ‘Gabriela Souza’, ‘gabrielasouza@email.com’, ‘2424242424’, ‘Família’),
+(‘50’, ‘Henrique Costa’, ‘henriquecosta@email.com’, ‘2525252525’, ‘Trabalho’),
+
+SELEC id, nome, telefone, FROM contatos WHERE nome = ‘Felipe Oliveira’;
+SELEC id, nome, email, FROM contatos WHERE telefone = ‘1818181818’;
+SELEC id, nome, telefone FROM contatos WHERE id = ‘24’;
+SELEC id, nome, telefone FROM contatos WHERE nome IS NOT NULL;
+SELEC nome, email FROM contatos WHERE email IS NOT NULL;
+SELEC nome, telefone FROM contatos WHERE email IS NOT NULL;
+SELEC nome FROM contatos WHERE id = ‘20’;
+SELEC telefone FROM contatos WHERE telefone = ‘666666666’;
+SELEC email FROM contatos WHERE nome = ‘Rafael Rodrigues’;
+SELEC telefone FROM contatos WHERE id = ‘2’;
+
+DELETE FROM contatos WHERE id = ‘8’;
+DELETE FROM contatos WHERE id = ‘15’;
+DELETE FROM contatos WHERE id = ‘42’;
+DELETE FROM contatos WHERE id = ‘9’;
+DELETE FROM contatos WHERE id = ‘23’;
+
+ALTER TABLE contatos ADD favorito VARCHAT (3);
